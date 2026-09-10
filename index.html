@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>轻少女风个人作品集 | CV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg">
+    <!-- 轻柔花瓣装饰（淡光） -->
+    <svg class="petals" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden>
+      <defs>
+        <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="10" />
+        </filter>
+      </defs>
+      <g filter="url(#soft)" opacity="0.25" fill="none" stroke="rgba(255,230,240,0.9)" stroke-width="1">
+        <ellipse cx="120" cy="60" rx="40" ry="18" fill="#FFEFF1" />
+        <ellipse cx="700" cy="40" rx="55" ry="22" fill="#FFF6EE" />
+        <ellipse cx="420" cy="340" rx="48" ry="20" fill="#FFF0F2" />
+      </g>
+    </svg>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="brand">RANJIA03 — 轻少女风作品集</h1>
+      <p class="subtitle">艺术 / 新媒体 / 美术教育 · 视觉与交互</p>
+    </header>
+
+    <section class="top-grid">
+      <article class="profile-card" aria-labelledby="name">
+        <div class="avatar" aria-hidden>
+          <!-- 简洁扁平头像 SVG -->
+          <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" rx="16" fill="#FFF9F6" stroke="#F3E7E8" stroke-width="1"/>
+            <circle cx="60" cy="44" r="24" fill="#FFF0F2" stroke="#F5DCE0" />
+            <rect x="26" y="74" width="68" height="22" rx="6" fill="#FFF7F4" stroke="#F3E7E8"/>
+            <path d="M40 88c6-4 14-4 20 0" stroke="#F5DCE0" stroke-width="1.5" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+        <div class="profile-body">
+          <h2 id="name">你好，我是 Ranjia</h2>
+          <p class="role">艺术 / 新媒体创作者 · 教育者</p>
+          <p class="bio">擅长将柔美视觉与沉浸交互结合，作品以讲述情感与日常细节为核心。热爱手绘与数字合成，教学与创作并行。</p>
+
+          <div class="links">
+            <a href="#projects" class="btn-outline">作品集</a>
+            <a href="#contact" class="btn-fill">联系我</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="skills">
+        <h3>技能标签</h3>
+        <div class="tags" id="tags">
+          <button class="tag">交互设计</button>
+          <button class="tag">视觉艺术</button>
+          <button class="tag">新媒体装置</button>
+          <button class="tag">教学设计</button>
+          <button class="tag">手绘插画</button>
+          <button class="tag">前端实现</button>
+        </div>
+        <p class="hint">鼠标悬浮标签试试浮动与光影效果</p>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <h3>精选作品</h3>
+      <div class="carousel" id="carousel" aria-roledescription="carousel">
+        <button class="carousel-nav prev" aria-label="上一项">‹</button>
+        <ul class="slides">
+          <li class="slide" data-title="梦境记录" data-desc="混合媒介装置，带动观众参与叙事" aria-hidden="false">
+            <div class="thumb">
+              <!-- SVG 占位图/可替换为真实图片 -->
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" role="img">
+                <rect width="100%" height="100%" fill="#FFF0F2"/>
+                <g fill="#FFDDE0">
+                  <rect x="30" y="40" width="320" height="140" rx="12" />
+                </g>
+              </svg>
+            </div>
+            <div class="meta">
+              <h4>梦境记录</h4>
+              <button class="preview" data-src="" aria-haspopup="dialog">预览弹窗</button>
+            </div>
+          </li>
+
+          <li class="slide" data-title="时间笔记" data-desc="交互网页与声音装置" aria-hidden="true">
+            <div class="thumb">
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+                <rect width="100%" height="100%" fill="#FFF7EE"/>
+                <circle cx="200" cy="120" r="60" fill="#FFF0F2"/>
+              </svg>
+            </div>
+            <div class="meta">
+              <h4>时间笔记</h4>
+              <button class="preview">预览弹窗</button>
+            </div>
+          </li>
+
+          <li class="slide" data-title="课堂实验" data-desc="面向青少年的美术教育项目" aria-hidden="true">
+            <div class="thumb">
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+                <rect width="100%" height="100%" fill="#FFF9F6"/>
+                <path d="M40 200 q80 -120 160 0 t160 0" fill="#FFF0F2" />
+              </svg>
+            </div>
+            <div class="meta">
+              <h4>课堂实验</h4>
+              <button class="preview">预览弹窗</button>
+            </div>
+          </li>
+        </ul>
+        <button class="carousel-nav next" aria-label="下一项">›</button>
+      </div>
+    </section>
+
+    <!-- 作品预览模态 -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-panel">
+        <button class="modal-close" aria-label="关闭">✕</button>
+        <div class="modal-content">
+          <h4 id="modal-title"></h4>
+          <p id="modal-desc"></p>
+          <div class="modal-media" id="modal-media">
+            <!-- 可插入大图或嵌入链接 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="contact" class="footer">
+      <p>邮箱：<a href="mailto:youremail@example.com">youremail@example.com</a> · 期待合作 · 更新于 2026</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
