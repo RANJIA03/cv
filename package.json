@@ -1,0 +1,13 @@
+{
+  "name": "ranjia-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ranjia's data-driven visual portfolio",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
