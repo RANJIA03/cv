@@ -79,8 +79,24 @@ function initMotion() {
   window.addEventListener('pointermove', event => { orb.style.transform = `translate(${event.clientX - 8}px, ${event.clientY - 8}px)`; });
 }
 
+function initFilmIntro() {
+  const intro = $('#film-intro');
+  const enterButton = $('#enter-archive');
+  document.body.classList.add('intro-active');
+  const enterArchive = () => {
+    document.body.classList.add('archive-entered');
+    document.body.classList.remove('intro-active');
+    intro.setAttribute('aria-hidden', 'true');
+    window.setTimeout(() => intro.remove(), 1100);
+  };
+  enterButton.addEventListener('click', enterArchive);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && !document.body.classList.contains('archive-entered')) enterArchive();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  renderStats(); renderFilters(); renderWorks(); renderTimeline(); renderToolkit(); initMotion();
+  renderStats(); renderFilters(); renderWorks(); renderTimeline(); renderToolkit(); initMotion(); initFilmIntro();
   $('.menu-toggle').addEventListener('click', () => { document.body.classList.toggle('menu-open'); });
   document.querySelectorAll('.drawer a').forEach(link => link.addEventListener('click', () => document.body.classList.remove('menu-open')));
   $('.modal-close').addEventListener('click', closeModal);
